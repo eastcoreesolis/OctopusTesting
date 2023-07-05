@@ -6,7 +6,7 @@ step "run-a-script-in-container" {
         properties = {
             Octopus.Action.Script.ScriptBody = <<-EOT
                 #!/bin/bash
-                
+                pwd
                 ls
                 EOT
             Octopus.Action.Script.ScriptSource = "Inline"
