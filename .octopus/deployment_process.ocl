@@ -4,7 +4,6 @@ step "run-a-script-in-container" {
     action {
         action_type = "Octopus.Script"
         properties = {
-            Octopus.Action.RunOnServer = "true"
             Octopus.Action.Script.ScriptBody = <<-EOT
                 #!/bin/bash
                 
@@ -14,6 +13,6 @@ step "run-a-script-in-container" {
             Octopus.Action.Script.Syntax = "Bash"
             OctopusUseBundledTooling = "False"
         }
-        worker_pool = "default-worker-pool-1"
+        worker_pool = "static-worker-pool-01"
     }
 }
