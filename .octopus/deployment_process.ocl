@@ -1,0 +1,24 @@
+step "run-a-script-in-container" {
+    name = "Run a Script in Container"
+
+    action {
+        action_type = "Octopus.Script"
+        properties = {
+            Octopus.Action.RunOnServer = "true"
+            Octopus.Action.Script.ScriptBody = <<-EOT
+                #!/bin/bash
+                
+                ll
+                EOT
+            Octopus.Action.Script.ScriptSource = "Inline"
+            Octopus.Action.Script.Syntax = "Bash"
+            OctopusUseBundledTooling = "False"
+        }
+        worker_pool = "default-worker-pool-1"
+
+        container {
+            feed = "docker-hub"
+            image = "ubuntu:latest"
+        }
+    }
+}
