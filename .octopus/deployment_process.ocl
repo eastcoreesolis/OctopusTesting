@@ -14,5 +14,10 @@ step "run-a-script-in-container" {
             OctopusUseBundledTooling = "False"
         }
         worker_pool = "static-worker-pool-01"
+
+        container {
+            feed = "docker-hub"
+            image = "eastcoreesolis/timeserv"
+        }
     }
 }
