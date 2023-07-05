@@ -17,7 +17,7 @@ step "run-a-script-in-container" {
 
         container {
             feed = "docker-hub"
-            image = "ubuntu:latest"
+            image = "mcr.microsoft.com/dotnet/runtime:7.0"
         }
     }
 }
