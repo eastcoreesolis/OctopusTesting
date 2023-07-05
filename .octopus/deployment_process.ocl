@@ -17,7 +17,7 @@ step "run-a-script-in-container" {
 
         container {
             feed = "docker-hub"
-            image = "eastcoreesolis/timeserv"
+            image = "ubuntu:latest"
         }
     }
 }
