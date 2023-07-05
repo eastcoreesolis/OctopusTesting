@@ -15,10 +15,5 @@ step "run-a-script-in-container" {
             OctopusUseBundledTooling = "False"
         }
         worker_pool = "default-worker-pool-1"
-
-        container {
-            feed = "docker-hub"
-            image = "ubuntu:latest"
-        }
     }
 }
