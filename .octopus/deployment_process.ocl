@@ -7,7 +7,7 @@ step "run-a-script-in-container" {
             Octopus.Action.Script.ScriptBody = <<-EOT
                 #!/bin/bash
                 
-                ll
+                ls
                 EOT
             Octopus.Action.Script.ScriptSource = "Inline"
             Octopus.Action.Script.Syntax = "Bash"
